@@ -1,0 +1,128 @@
+{
+  "en": {
+    "work": [
+      {
+        "title": "IT Administrator",
+        "company": "Onedotzero (Enköping municipality)",
+        "startTime": "2017",
+        "endTime": "2024.01",
+        "description": [
+          "Designed and built a web solution to allow healthcare units to create their own surveys.",
+          "Performed troubleshooting of PCs and technical equipment for customers in their offices and during home visits.",
+          "Designed and built a time reporting system for internal usage with Drupal, Apache, MySQL and cron.",
+          "Was responsible for the Apple port of a phone application which could synchronise countdowns between sail boats during sail boat races.",
+          "Developed several Batch and PowerShell tools to help my colleagues in their work, such as automating image management for Enköping's media bank."
+        ]
+      },
+      {
+        "title": "Developer",
+        "company": "L Versatile Systems AB (Järfälla)",
+        "startTime": "2016",
+        "endTime": "2017",
+        "description": [
+          "Created a tool which worked with Drush to automate the entire installation process for our meeting management software, including server access, database imports and further customisation as per our customers' wishes.",
+          "Was responsible for the installation and management of new servers, both physical and virtual.",
+          "Further developed the company's meeting management system LVIS Congress, a web solution which handles scheduling, automatic contact, reminders, and presentation opportunities during a meeting."
+        ]
+      }
+    ],
+    "education": [
+      {
+        "title": "Full Stack Developer .NET",
+        "school": "Chas Academy",
+        "startTime": "2025",
+        "endTime": "ongoing",
+        "description": "I am studying a Full Stack Developer course to deepen my knowledge of .NET, databases, security, Azure, back-end, and front-end."
+      }
+    ],
+    "other": [
+      {
+        "title": "Moderator at reddit.com",
+        "startTime": "2015",
+        "endTime": "ongoing",
+        "description": "Responsible for the forum /r/dragonage. Ensures that over 300,000 users enjoy themselves and follow the rules set by the moderator team, maintains CSS and automation, and develops ideas to improve operations."
+      },
+      {
+        "title": "Amateur translation (Japanese to English)",
+        "startTime": "2003",
+        "endTime": "2014",
+        "description": "Led an international collaborative group for the translation of TV series and comic books from Japanese to English. Performed the translations themselves, video encoding, and subtitle timing."
+      },
+      {
+        "title": "Creation of Computer Game Modifications",
+        "startTime": "2012",
+        "endTime": "ongoing",
+        "description": "I find out how to open an archive containing data, extract data from it, change the data, and then reinsert it into the original archive without the software noticing that I have modified the content. In this way, I change the software's function, appearance, or performance."
+      }
+    ],
+    "languages": [
+      "Swedish, native speaker",
+      "English, fluent",
+      "German, high school level",
+      "Japanese, strong understanding"
+    ]
+  },
+  "sv": {
+    "work": [
+      {
+        "title": "IT-handläggare",
+        "company": "Onedotzero (Enköpings kommun)",
+        "startTime": "2017",
+        "endTime": "2024.01",
+        "description": [
+          "Designade och utvecklade en webblösning som gjorde det möjligt för vårdenheter att skapa egna enkäter.",
+          "Utförde felsökning av datorer och teknisk utrustning hos kunder, både på kontor och vid hembesök.",
+          "Designade och utvecklade ett internt tidrapporteringssystem med Drupal, Apache, MySQL och cron.",
+          "Ansvarade för Apple-portningen av en telefonapplikation som kunde synkronisera nedräkningar mellan segelbåtar under kappseglingar.",
+          "Utvecklade flera Batch- och PowerShell-verktyg för att hjälpa kollegor i deras arbete, exempelvis automatisering av bildhantering för Enköpings mediabank."
+        ]
+      },
+      {
+        "title": "Utvecklare",
+        "company": "L Versatile Systems AB (Järfälla)",
+        "startTime": "2016",
+        "endTime": "2017",
+        "description": [
+          "Skapade ett verktyg som tillsammans med Drush automatiserade hela installationsprocessen för vår möteshanteringsmjukvara, inklusive serveråtkomst, databasimporter och vidare anpassningar enligt kundernas önskemål.",
+          "Ansvarade för installation och hantering av nya servrar, både fysiska och virtuella.",
+          "Vidareutvecklade företagets möteshanteringssystem LVIS Congress, en webblösning som hanterar schemaläggning, automatisk kontakt, påminnelser och presentationsmöjligheter under möten."
+        ]
+      }
+    ],
+    "education": [
+      {
+        "title": "Fullstackutvecklare .NET",
+        "school": "Chas Academy",
+        "startTime": "2025",
+        "endTime": "pågående",
+        "description": "Jag studerar till Fullstackutvecklare för att fördjupa mina kunskaper inom .NET, databaser, säkerhet, Azure, back-end och front-end."
+      }
+    ],
+    "other": [
+      {
+        "title": "Moderator på reddit.com",
+        "startTime": "2015",
+        "endTime": "pågående",
+        "description": "Ansvarar för forumet r/dragonage. Säkerställer att över 300 000 användare trivs och följer moderatorgruppens regler, underhåller CSS och automatisering samt utvecklar idéer för att förbättra verksamheten."
+      },
+      {
+        "title": "Amatöröversättning (japanska till engelska)",
+        "startTime": "2003",
+        "endTime": "2014",
+        "description": "Ledde en internationell samarbetsgrupp för översättning av TV-serier och serietidningar från japanska till engelska. Utförde även översättning, videokodning och timing av undertexter."
+      },
+      {
+        "title": "Skapande av datorspelsmodifieringar",
+        "startTime": "2012",
+        "endTime": "pågående",
+        "description": "Tar reda på hur arkiv med data öppnas, extraherar innehåll, modifierar det och återinför det i originalarkivet utan att förändringen märks. På så sätt ändrar jag programmets funktion, utseende eller prestanda."
+      }
+    ],
+    "languages": [
+      "Svenska, modersmål",
+      "Engelska, flytande",
+      "Tyska, gymnasienivå",
+      "Japanska, god förståelse"
+    ]
+  }
+}
