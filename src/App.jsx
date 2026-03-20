@@ -1,5 +1,6 @@
 import { useState } from "react";
 import { useEffect } from "react";
+import { languages, defaultLanguage } from "./config/Languages.js";
 import { pages } from "./content/Pages.js";
 import { renderEntry } from "./components/RenderEntry.jsx";
 import { Routes, Route } from "react-router-dom";
@@ -10,45 +11,15 @@ import Navbar from "./components/Navbar.jsx";
 import Portfolio from "./components/Portfolio.jsx";
 import Rain from "./components/Rain.jsx";
 import TitleBar from "./components/TitleBar.jsx";
+import useLanguage from "./hooks/useLanguage.js";
 import useRainKeystrokes from "./hooks/useRainKeystrokes.js"
 
 export default function App() {
-  const [language, setLanguage] = useState(() => {
-    return localStorage.getItem("portfolio_language")
-      || "en";
-  });
-
-  useEffect(() => {
-    localStorage.setItem("portfolio_language", language);
-  }, [language]);
-
-  const GetWebsiteName = (language) => {
-    switch (language) {
-      case "en":
-        return "Emma's Hideout";
-        
-      case "sv":
-        return "Emmas gömställe";
-    }
-  }
-
-  const websiteName = GetWebsiteName(language);
+  const { language, websiteName, toggleLanguage } = useLanguage();
   const [modal, setModal] = useState(null);
   const [rainActive, setRainActive] = useState(false);
-  useRainKeystrokes(() => setRainActive(true))
 
-  const languageToggle = () => {
-    setLanguage(current => {
-      switch (current) {
-        case "en":
-          return "sv";
-        case "sv":
-          return "en";
-        default:
-          return current;
-      }
-    });
-  }
+  useRainKeystrokes(() => setRainActive(true))
 
   return (
     <>
@@ -57,7 +28,7 @@ export default function App() {
       >
         <Navbar
           language={language}
-          toggleLanguage={languageToggle}
+          toggleLanguage={toggleLanguage}
         />
 
         <Routes>
