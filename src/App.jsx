@@ -11,6 +11,7 @@ import Navbar from "./components/Navbar.jsx";
 import Portfolio from "./components/Portfolio.jsx";
 import Rain from "./components/Rain.jsx";
 import TitleBar from "./components/TitleBar.jsx";
+import useRainKeystrokes from "./hooks/useRainKeystrokes.js"
 
 export default function App() {
   const [language, setLanguage] = useState(() => {
@@ -45,27 +46,7 @@ export default function App() {
   const websiteName = GetWebsiteName(language);
   const [modal, setModal] = useState(null);
   const [rainActive, setRainActive] = useState(false);
-  const [userInput, setUserInput] = useState("");
-
-
-  useEffect(() => {
-    const handleKey = (e) => {
-      setUserInput(prev => {
-        const userInput = (prev + e.key.toLowerCase()).slice(-6);
-
-        if (userInput === "rabbit") {
-          setRainActive(true);
-          return "";
-        }
-
-        return userInput;
-      });
-    };
-
-    window.addEventListener("keydown", handleKey);
-    return () => window.removeEventListener("keydown", handleKey);
-  }, []);
-
+  useRainKeystrokes(() => setRainActive(true))
 
   const languageToggle = () => {
     setLanguage(current => {
