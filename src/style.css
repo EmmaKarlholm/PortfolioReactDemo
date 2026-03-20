@@ -430,6 +430,18 @@ footer p {
         display: block;
     }
 
+    #nav {
+        flex-wrap: nowrap;
+        text-align: center;
+    }
+
+    #nav a {
+        flex: 1 1 auto;
+        font-size: 0.9rem;
+        padding: 0.4rem;
+        align-items: center;
+    }
+
     #toggle-language {
         width: auto;
         flex: 0 0 auto;
