@@ -12,7 +12,8 @@ import Portfolio from "./components/Portfolio.jsx";
 import Rain from "./components/Rain.jsx";
 import TitleBar from "./components/TitleBar.jsx";
 import useLanguage from "./hooks/useLanguage.js";
-import useRainKeystrokes from "./hooks/useRainKeystrokes.js"
+import useRainKeystrokes from "./hooks/useRainKeystrokes.js";
+import useRainClicks from "./hooks/useRainClicks.js";
 
 export default function App() {
   const { language, websiteName, toggleLanguage } = useLanguage();
@@ -20,6 +21,8 @@ export default function App() {
   const [rainActive, setRainActive] = useState(false);
 
   useRainKeystrokes(() => setRainActive(true))
+  const { clickedFollow } = useRainClicks(() =>
+    setRainActive(true));
 
   return (
     <>
@@ -115,7 +118,12 @@ export default function App() {
         />
 
         <footer>
-          <button id="follow-button">Follow the white...?</button>
+          <button
+            id="follow-button"
+            onClick={clickedFollow}
+          >
+            Follow the white...?
+          </button>
 
           <p>Copyright © 2026 Emma Karlholm</p>
 
