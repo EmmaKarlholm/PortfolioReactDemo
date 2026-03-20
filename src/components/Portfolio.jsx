@@ -8,8 +8,11 @@ export default function Portfolio({ pageData, renderEntry }) {
     fetch("https://api.github.com/users/EmmaKarlholm/repos?sort=pushed")
       .then(response => response.json())
       .then(data => {
-        const filteredData = data.filter(repo => 
+        const noSchoolAssignments = data.filter(repo => 
           !repo.topics?.includes("school-assignment")
+        );
+        const filteredData = noSchoolAssignments.filter(repo => 
+          repo.name !== repo.owner.login
         );
         setRepos(filteredData);
         setLoading(false);
