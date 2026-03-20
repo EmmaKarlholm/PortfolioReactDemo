@@ -184,7 +184,6 @@ main {
 #content.portfolio-layout {
     column-count: 1;
     display: grid;
-    grid-template-columns: repeat(2, 1fr);
     align-items: center;
 }
 
@@ -263,6 +262,7 @@ img {
     gap: 2rem;
     display: grid;
 }
+
 .portfolio-layout img {
     width: 100%;
     height: 180px;
@@ -428,6 +428,11 @@ footer p {
     #toggle-language {
         position: static;
         display: block;
+    }
+
+    #toggle-language {
+        width: auto;
+        flex: 0 0 auto;
     }
 }
     
