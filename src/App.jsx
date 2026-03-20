@@ -5,7 +5,6 @@ import { renderEntry } from "./components/RenderEntry.jsx";
 import { Routes, Route } from "react-router-dom";
 import Content from "./components/Content.jsx";
 import CV from "./components/CV.jsx";
-import cv from "./content/CV.json";
 import Modal from "./components/Modal.jsx";
 import Navbar from "./components/Navbar.jsx";
 import Portfolio from "./components/Portfolio.jsx";
@@ -22,16 +21,6 @@ export default function App() {
   useEffect(() => {
     localStorage.setItem("portfolio_language", language);
   }, [language]);
-
-  const [repos, setRepos] = useState([]);
-
-  useEffect(() => {
-    fetch("https://api.github.com/users/EmmaKarlholm/repos")
-      .then(response => response.json())
-      .then(data => {
-        setRepos(data);
-      })
-  }, [])
 
   const GetWebsiteName = (language) => {
     switch (language) {
