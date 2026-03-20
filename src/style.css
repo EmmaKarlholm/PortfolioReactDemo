@@ -27,6 +27,12 @@
     initial-value: #B6EADA;
 }
 
+@property --highlighttrans {
+    syntax: "<color>";
+    inherits: false;
+    initial-value: #B6EADA30;
+}
+
 @property --bright {
     syntax: "<color>";
     inherits: false;
@@ -102,7 +108,8 @@ html {
 }
 
 #nav a.active {
-    background-color: var(--dark);
+    /* background-color: var(--dark); */
+    background: var(--highlighttrans);
     border-radius: 0.5rem;
 }
 
@@ -184,7 +191,7 @@ main {
 
 #top-title {
     grid-column: 1 / -1;
-    font-size: 2rem;
+    font-size: clamp(1.5rem, 5vw, 2rem);
     margin-top: 2rem;
     margin-bottom: 0.1rem;
     text-align: center;
@@ -195,7 +202,7 @@ p, h2, h3 {
 }
 
 p {
-    font-size: 1rem;
+    font-size: clamp(0.9rem, 3vw, 1rem);
     margin-bottom: 1rem;
     break-after: avoid-page;
 }
@@ -205,7 +212,7 @@ p {
 }
 
 h2 {
-    font-size: 1.5rem;
+    font-size: clamp(1.2rem, 4vw, 1.5rem);
     margin-bottom: 0.5rem;
     text-align: center;
     color: var(--bright);
@@ -247,7 +254,6 @@ img {
     margin-left: auto;
     transition: background 0.2s ease;
     flex: 0 0 auto;
-
     display: flex;
     align-items: center;
     justify-content: center;
@@ -422,7 +428,7 @@ footer p {
         display: block;
     }
 }
-
+    
 @media (max-width: 500px) {
     #top-title {
         font-size: 1.5rem;
@@ -439,6 +445,10 @@ footer p {
     img {
         text-align: center;
     }
+
+    .portfolio-layout {
+        gap: 1rem;
+    }
 }
 
 @media print {
@@ -454,7 +464,7 @@ footer p {
     #content {
         box-shadow: none;
     }
-}  
+}
 
 
 
