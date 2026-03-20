@@ -5,7 +5,7 @@ export default function Portfolio({ pageData, renderEntry }) {
   const [loading, setLoading] = useState(true);
 
   useEffect(() => {
-    fetch("https://api.github.com/users/EmmaKarlholm/repos?sort=updated")
+    fetch("https://api.github.com/users/EmmaKarlholm/repos?sort=pushed")
       .then(response => response.json())
       .then(data => {
         const filteredData = data.filter(repo => 
