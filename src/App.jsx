@@ -1,6 +1,4 @@
 import { useState } from "react";
-import { useEffect } from "react";
-import { languages, defaultLanguage } from "./config/Languages.js";
 import { pages } from "./content/Pages.js";
 import { renderEntry } from "./components/RenderEntry.jsx";
 import { Routes, Route } from "react-router-dom";
