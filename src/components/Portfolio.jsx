@@ -7,8 +7,11 @@ export default function Portfolio({ pageData, renderEntry }) {
   useEffect(() => {
     fetch("https://api.github.com/users/EmmaKarlholm/repos?sort=updated")
       .then(response => response.json())
-      .then(data => { // NOTE to future self: Remove school tutorials etc
-        setRepos(data);
+      .then(data => {
+        const filteredData = data.filter(repo => 
+          !repo.topics?.includes("school-assignment")
+        );
+        setRepos(filteredData);
         setLoading(false);
       })
       .catch(errorMessage => {
