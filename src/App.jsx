@@ -5,10 +5,12 @@ import { renderEntry } from "./components/RenderEntry.jsx";
 import { Routes, Route } from "react-router-dom";
 import Content from "./components/Content.jsx";
 import CV from "./components/CV.jsx";
+import cv from "./content/CV.json";
 import Modal from "./components/Modal.jsx";
 import Navbar from "./components/Navbar.jsx";
 import Portfolio from "./components/Portfolio.jsx";
 import Rain from "./components/Rain.jsx";
+import TitleBar from "./components/TitleBar.jsx";
 
 export default function App() {
   const [language, setLanguage] = useState(() => {
@@ -30,10 +32,21 @@ export default function App() {
       })
   }, [])
 
+  const GetWebsiteName = (language) => {
+    switch (language) {
+      case "en":
+        return "Emma's Hideout";
+        
+      case "sv":
+        return "Emmas gömställe";
+    }
+  }
 
+  const websiteName = GetWebsiteName(language);
   const [modal, setModal] = useState(null);
   const [rainActive, setRainActive] = useState(false);
   const [userInput, setUserInput] = useState("");
+
 
   useEffect(() => {
     const handleKey = (e) => {
@@ -69,7 +82,6 @@ export default function App() {
 
   return (
     <>
-
       <div
         className={rainActive ? "app rain-mode" : "app"}
       >
@@ -83,42 +95,71 @@ export default function App() {
           <Route
             path="/"
             element={
-              <Content
-                pageData={pages[language].home}
-                renderEntry={(entry, indexKey) =>
-                  renderEntry(entry, indexKey, setModal)
-                }
-              />
+              <>
+                <TitleBar
+                  websiteName={websiteName}
+                  subpageTitle={pages[language].home.title}
+                />
+                <Content
+                  pageData={pages[language].home}
+                  renderEntry={(entry, indexKey) =>
+                    renderEntry(entry, indexKey, setModal)
+                  }
+                />
+              </>
             }
           />
 
           <Route
             path="/about"
             element={
-              <Content
-                pageData={pages[language].about}
-                renderEntry={(entry, indexKey) =>
-                  renderEntry(entry, indexKey, setModal)
-                }
-              />
+              <>
+                <TitleBar
+                  websiteName={websiteName}
+                  subpageTitle={pages[language].about.title}
+                />
+
+                <Content
+                  pageData={pages[language].about}
+                  renderEntry={(entry, indexKey) =>
+                    renderEntry(entry, indexKey, setModal)
+                  }
+                />
+              </>
             }
           />
 
           <Route
             path="/portfolio"
             element={
-              <Portfolio
-                pageData={pages[language].portfolio}
-                renderEntry={(entry, indexKey) =>
-                  renderEntry(entry, indexKey, setModal)
-                }
-              />
+              <>
+                <TitleBar
+                  websiteName={websiteName}
+                  subpageTitle={pages[language].portfolio.title}
+                />
+
+                <Portfolio
+                  pageData={pages[language].portfolio}
+                  renderEntry={(entry, indexKey) =>
+                    renderEntry(entry, indexKey, setModal)
+                  }
+                />
+              </>
             }
           />
 
           <Route
             path="/cv"
-            element={<CV language={language} />}
+            element={
+              <>
+                <TitleBar
+                  websiteName={websiteName}
+                  subpageTitle="CV"
+                />
+
+                <CV language={language} />
+              </>
+            }
           />
         </Routes>
 
