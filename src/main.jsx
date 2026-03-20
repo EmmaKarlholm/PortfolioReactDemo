@@ -6,6 +6,7 @@ import App from './App.jsx'
 import "./style.css"
 
 const deployingToGitHubPages = false;
+// Don't forget to check ../vite.config.js too
 
 if (deployingToGitHubPages) {
   createRoot(document.getElementById('root')).render(
