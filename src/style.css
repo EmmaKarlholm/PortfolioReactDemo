@@ -108,7 +108,6 @@ html {
 }
 
 #nav a.active {
-    /* background-color: var(--dark); */
     background: var(--highlighttrans);
     border-radius: 0.5rem;
 }
@@ -292,21 +291,24 @@ img {
 
 
 /* Footer */
+
 footer {
-    position: relative;
-    display: grid;
-    grid-template-columns: 1fr auto 1fr;
-    z-index: 2;
-    align-items: center;
-    background-color: var(--base);
-    color: var(--highlight);
-    padding: 1rem;
-    flex-shrink: 0;
-    margin-top: auto;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: var(--base);
+  color: var(--highlight);
+  padding: 1rem;
+  flex-shrink: 0;
+  margin-top: auto;
+  z-index: 3;
 }
 
+
 footer p {
-    margin: 0;
+  margin: 0;
+  text-align: center;
 }
 
 /* Modal */
@@ -483,6 +485,7 @@ footer p {
     transition: background 0.2s ease;
     flex: 0 0 auto;
     opacity: 0;
+    position: absolute;
 }
 
 #follow-button:active {
@@ -542,6 +545,7 @@ body.rain {
     margin-left: auto;
     transition: background 0.2s ease;
     flex: 0 0 auto;
+    position: absolute;
 } 
 
 .rain-mode {
